@@ -4,6 +4,7 @@ HH_PAGE_XPATH = {
     'a[@data-qa="vacancy-serp__vacancy-title"]/@href',
 }
 
+
 HH_VACANCY_XPATH = {
     "title": '//h1[@data-qa="vacancy-title"]/text()',
     "salary": '//p[@class="vacancy-salary"]/span/text()',

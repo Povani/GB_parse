@@ -7,6 +7,7 @@ from itemloaders.processors import TakeFirst, MapCompose
 def get_characteristics(item: str) -> dict:
     selector = Selector(text=item)
     data = {}
+
     data["name"] = selector.xpath(
         "//div[contains(@class, 'AdvertSpecs_label')]/text()"
     ).extract_first()

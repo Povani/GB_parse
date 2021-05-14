@@ -23,6 +23,3 @@ class HHMongoPipeline:
     def process_item(self, item, spider):
         self.db[spider.name].insert_one(item)
         return item
-
-    def close_spider(self, spider):
-        self

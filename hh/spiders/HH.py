@@ -11,6 +11,7 @@ class HhSpider(scrapy.Spider):
         "https://spb.hh.ru/search/vacancy?schedule=remote&L_profession_id=0&area=113"
     ]
 
+
     def _get_follow_xpath(self, response, xpath, callback):
         for url in response.xpath(xpath):
             yield response.follow(url, callback=callback)
