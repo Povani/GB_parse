@@ -10,7 +10,7 @@ from .settings import BOT_NAME
 from pymongo import MongoClient
 
 
-class AvitoPipeline:
+class AvitoParsePipeline:
     def __init__(self):
         client = MongoClient()
         self.db = client[BOT_NAME]
@@ -18,3 +18,4 @@ class AvitoPipeline:
     def process_item(self, item, spider):
         self.db[spider.name].insert_one(item)
         return item
+
